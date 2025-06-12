@@ -29,7 +29,7 @@ def generate_launch_description():
     robot_description = ParameterValue(
         Command([
             'xacro ',
-            PathJoinSubstitution([pkg_share, 'urdf', 'go2_description.urdf']),
+            PathJoinSubstitution([pkg_share, 'urdf', 'go2_description_mid360.urdf']),
         ]),
         value_type=str
         )

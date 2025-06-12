@@ -31,7 +31,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="file://$(find go2_description)/dae/hip.dae" scale="1 1 1"/>
+          <mesh filename="package://go2_description/dae/hip.dae" scale="1 1 1"/>
         </geometry>
         <material
           name="">
@@ -67,10 +67,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:if value="${(name == LF) or (name == LR)}">
-            <mesh filename="file://$(find go2_description)/dae/thigh.dae" scale="1 1 1"/>
+            <mesh filename="package://go2_description/dae/thigh.dae" scale="1 1 1"/>
           </xacro:if>
            <xacro:if value="${(name == RF) or (name == RR)}">
-            <mesh filename="file://$(find go2_description)/dae/thigh_mirror.dae" scale="1 1 1"/>
+            <mesh filename="package://go2_description/dae/thigh_mirror.dae" scale="1 1 1"/>
           </xacro:if>
         </geometry>
         <material
@@ -108,10 +108,10 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <xacro:if value="${(name == LF) or (name == LR)}">
-            <mesh filename="file://$(find go2_description)/dae/calf.dae" scale="1 1 1"/>
+            <mesh filename="package://go2_description/dae/calf.dae" scale="1 1 1"/>
           </xacro:if>
            <xacro:if value="${(name == RF) or (name == RR)}">
-            <mesh filename="file://$(find go2_description)/dae/calf_mirror.dae" scale="1 1 1"/>
+            <mesh filename="package://go2_description/dae/calf_mirror.dae" scale="1 1 1"/>
           </xacro:if>
         </geometry>
         <material
@@ -146,7 +146,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="file://$(find go2_description)/dae/foot.dae" scale="1 1 1"/>
+          <mesh filename="package://go2_description/dae/foot.dae" scale="1 1 1"/>
         </geometry>
         <material
           name="">
