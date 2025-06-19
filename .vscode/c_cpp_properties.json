@@ -1,0 +1,39 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/nvidia/ws/install/unitree_hg/include/**",
+        "/home/nvidia/ws/install/unitree_go/include/**",
+        "/home/nvidia/ws/install/pure_pursuit/include/**",
+        "/home/nvidia/ws/install/unitree_api/include/**",
+        "/home/nvidia/ws/install/rslidar_msg/include/**",
+        "/home/nvidia/ws/install/robot_joint_controller/include/**",
+        "/home/nvidia/ws/install/robot_msgs/include/**",
+        "/home/nvidia/ws/install/livox_ros_driver2/include/**",
+        "/home/nvidia/ws/install/liorf_localization/include/**",
+        "/home/nvidia/ws/install/go2_interfaces/include/**",
+        "/home/nvidia/ws/install/glim_ros/include/**",
+        "/home/nvidia/ws/install/glim/include/**",
+        "/home/nvidia/ws/install/elevation_map_msgs/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/nvidia/ws/src/control/joy2go2/include/**",
+        "/home/nvidia/ws/src/following/pure_pursuit/include/**",
+        "/home/nvidia/ws/src/localization/glim/include/**",
+        "/home/nvidia/ws/src/localization/glim_ros2/include/**",
+        "/home/nvidia/ws/src/localization/liorf_localization/include/**",
+        "/home/nvidia/ws/src/perception/elevation_mapping_cupy/elevation_mapping_cupy/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-arm64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

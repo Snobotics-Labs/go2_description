@@ -1,0 +1,34 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/nvidia/ws/install/unitree_hg/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/unitree_go/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/unitree_api/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/rslidar_msg/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/robot_msgs/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/liorf_localization/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/go2_interfaces/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/elevation_mapping_cupy/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/elevation_map_msgs/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/build/coco_detector",
+        "/home/nvidia/ws/install/coco_detector/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/nvidia/ws/install/unitree_hg/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/unitree_go/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/unitree_api/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/rslidar_msg/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/robot_msgs/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/liorf_localization/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/go2_interfaces/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/elevation_mapping_cupy/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/install/elevation_map_msgs/local/lib/python3.10/dist-packages",
+        "/home/nvidia/ws/build/coco_detector",
+        "/home/nvidia/ws/install/coco_detector/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
