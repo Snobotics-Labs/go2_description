@@ -81,7 +81,7 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint name="rslidar_joint" type="fixed">
-    <origin rpy="1.0 -1.57 0.0" xyz="0.03 0.0 -0.30"/>
+    <origin rpy="0.0 -0.6681 0.0" xyz="-0.15 0.0 -0.3"/>
     <parent link="rslidar_points"/>
     <child link="base_link"/>
   </joint>
