@@ -5,7 +5,7 @@ Stephen Brawner (brawner@gmail.com)
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="go2_description">
-  <link name="Go2_rslidar_points">
+  <link name="rslidar_points">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.001"/>
@@ -19,7 +19,7 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <link
-    name="Go2_base_link">
+    name="base_link">
     <inertial>
       <origin
         xyz="0.021112 0 -0.005366"
@@ -56,7 +56,7 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <link
-    name="Go2_Head_upper">
+    name="Head_upper">
     <inertial>
       <origin
         xyz="0 0 0"
@@ -80,26 +80,26 @@ Stephen Brawner (brawner@gmail.com)
       </geometry>
     </collision>
   </link>
-  <joint name="Go2_rslidar_joint" type="fixed">
+  <joint name="rslidar_joint" type="fixed">
     <origin rpy="0.0 -0.6681 0.0" xyz="-0.15 0.0 -0.3"/>
-    <parent link="Go2_rslidar_points"/>
-    <child link="Go2_base_link"/>
+    <parent link="rslidar_points"/>
+    <child link="base_link"/>
   </joint>
   <joint
-    name="Go2_Head_upper_joint"
+    name="Head_upper_joint"
     type="fixed" dont_collapse="true">
     <origin
       xyz="0.285 0 0.01"
       rpy="0 0 0" />
     <parent
-      link="Go2_base_link" />
+      link="base_link" />
     <child
-      link="Go2_Head_upper" />
+      link="Head_upper" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_Head_lower">
+    name="Head_lower">
     <inertial>
       <origin
         xyz="0 0 0"
@@ -124,20 +124,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_Head_lower_joint"
+    name="Head_lower_joint"
     type="fixed" dont_collapse="true">
     <origin
       xyz="0.008 0 -0.07"
       rpy="0 0 0" />
     <parent
-      link="Go2_Head_upper" />
+      link="Head_upper" />
     <child
-      link="Go2_Head_lower" />
+      link="Head_lower" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_FL_hip">
+    name="FL_hip">
     <inertial>
       <origin
         xyz="-0.0054 0.00194 -0.000105"
@@ -174,15 +174,15 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_FL_hip_joint"
+    name="FL_hip_joint"
     type="revolute">
     <origin
       xyz="0.1934 0.0465 0"
       rpy="0 0 0" />
     <parent
-      link="Go2_base_link" />
+      link="base_link" />
     <child
-      link="Go2_FL_hip" />
+      link="FL_hip" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -192,7 +192,7 @@ Stephen Brawner (brawner@gmail.com)
       velocity="30.1" />
   </joint>
   <link
-    name="Go2_FL_thigh">
+    name="FL_thigh">
     <inertial>
       <origin
         xyz="-0.00374 -0.0223 -0.0327"
@@ -229,15 +229,15 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_FL_thigh_joint"
+    name="FL_thigh_joint"
     type="revolute">
     <origin
       xyz="0 0.0955 0"
       rpy="0 0 0" />
     <parent
-      link="Go2_FL_hip" />
+      link="FL_hip" />
     <child
-      link="Go2_FL_thigh" />
+      link="FL_thigh" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -247,7 +247,7 @@ Stephen Brawner (brawner@gmail.com)
       velocity="30.1" />
   </joint>
   <link
-    name="Go2_FL_calf">
+    name="FL_calf">
     <inertial>
       <origin
         xyz="0.00548 -0.000975 -0.115"
@@ -284,15 +284,15 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_FL_calf_joint"
+    name="FL_calf_joint"
     type="revolute">
     <origin
       xyz="0 0 -0.213"
       rpy="0 0 0" />
     <parent
-      link="Go2_FL_thigh" />
+      link="FL_thigh" />
     <child
-      link="Go2_FL_calf" />
+      link="FL_calf" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -302,7 +302,7 @@ Stephen Brawner (brawner@gmail.com)
       velocity="15.70" />
   </joint>
   <link
-    name="Go2_FL_calflower">
+    name="FL_calflower">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
@@ -311,20 +311,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_FL_calflower_joint"
+    name="FL_calflower_joint"
     type="fixed">
     <origin
       xyz="0.020 0 -0.148"
       rpy="0 0.05 0" />
     <parent
-      link="Go2_FL_calf" />
+      link="FL_calf" />
     <child
-      link="Go2_FL_calflower" />
+      link="FL_calflower" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_FL_calflower1">
+    name="FL_calflower1">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
@@ -333,20 +333,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_FL_calflower1_joint"
+    name="FL_calflower1_joint"
     type="fixed">
     <origin
       xyz="-0.01 0 -0.04"
       rpy="0 0.48 0" />
     <parent
-      link="Go2_FL_calflower" />
+      link="FL_calflower" />
     <child
-      link="Go2_FL_calflower1" />
+      link="FL_calflower1" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_FL_foot">
+    name="FL_foot">
     <inertial>
       <origin
         xyz="0 0 0"
@@ -383,20 +383,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_FL_foot_joint"
+    name="FL_foot_joint"
     type="fixed" dont_collapse="true">
     <origin
       xyz="0 0 -0.213"
       rpy="0 0 0" />
     <parent
-      link="Go2_FL_calf" />
+      link="FL_calf" />
     <child
-      link="Go2_FL_foot" />
+      link="FL_foot" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_FR_hip">
+    name="FR_hip">
     <inertial>
       <origin
         xyz="-0.0054 -0.00194 -0.000105"
@@ -433,15 +433,15 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_FR_hip_joint"
+    name="FR_hip_joint"
     type="revolute">
     <origin
       xyz="0.1934 -0.0465 0"
       rpy="0 0 0" />
     <parent
-      link="Go2_base_link" />
+      link="base_link" />
     <child
-      link="Go2_FR_hip" />
+      link="FR_hip" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -451,7 +451,7 @@ Stephen Brawner (brawner@gmail.com)
       velocity="30.1" />
   </joint>
   <link
-    name="Go2_FR_thigh">
+    name="FR_thigh">
     <inertial>
       <origin
         xyz="-0.00374 0.0223 -0.0327"
@@ -488,15 +488,15 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_FR_thigh_joint"
+    name="FR_thigh_joint"
     type="revolute">
     <origin
       xyz="0 -0.0955 0"
       rpy="0 0 0" />
     <parent
-      link="Go2_FR_hip" />
+      link="FR_hip" />
     <child
-      link="Go2_FR_thigh" />
+      link="FR_thigh" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -506,7 +506,7 @@ Stephen Brawner (brawner@gmail.com)
       velocity="30.1" />
   </joint>
   <link
-    name="Go2_FR_calf">
+    name="FR_calf">
     <inertial>
       <origin
         xyz="0.00548 0.000975 -0.115"
@@ -543,15 +543,15 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_FR_calf_joint"
+    name="FR_calf_joint"
     type="revolute">
     <origin
       xyz="0 0 -0.213"
       rpy="0 0 0" />
     <parent
-      link="Go2_FR_thigh" />
+      link="FR_thigh" />
     <child
-      link="Go2_FR_calf" />
+      link="FR_calf" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -561,7 +561,7 @@ Stephen Brawner (brawner@gmail.com)
       velocity="15.70" />
   </joint>
   <link
-    name="Go2_FR_calflower">
+    name="FR_calflower">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
@@ -570,20 +570,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_FR_calflower_joint"
+    name="FR_calflower_joint"
     type="fixed">
     <origin
       xyz="0.020 0 -0.148"
       rpy="0 0.05 0" />
     <parent
-      link="Go2_FR_calf" />
+      link="FR_calf" />
     <child
-      link="Go2_FR_calflower" />
+      link="FR_calflower" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_FR_calflower1">
+    name="FR_calflower1">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
@@ -592,20 +592,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_FR_calflower1_joint"
+    name="FR_calflower1_joint"
     type="fixed">
     <origin
       xyz="-0.01 0 -0.04"
       rpy="0 0.48 0" />
     <parent
-      link="Go2_FR_calflower" />
+      link="FR_calflower" />
     <child
-      link="Go2_FR_calflower1" />
+      link="FR_calflower1" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_FR_foot">
+    name="FR_foot">
     <inertial>
       <origin
         xyz="0 0 0"
@@ -642,20 +642,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_FR_foot_joint"
+    name="FR_foot_joint"
     type="fixed" dont_collapse="true">
     <origin
       xyz="0 0 -0.213"
       rpy="0 0 0" />
     <parent
-      link="Go2_FR_calf" />
+      link="FR_calf" />
     <child
-      link="Go2_FR_foot" />
+      link="FR_foot" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_RL_hip">
+    name="RL_hip">
     <inertial>
       <origin
         xyz="0.0054 0.00194 -0.000105"
@@ -692,15 +692,15 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_RL_hip_joint"
+    name="RL_hip_joint"
     type="revolute">
     <origin
       xyz="-0.1934 0.0465 0"
       rpy="0 0 0" />
     <parent
-      link="Go2_base_link" />
+      link="base_link" />
     <child
-      link="Go2_RL_hip" />
+      link="RL_hip" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -710,7 +710,7 @@ Stephen Brawner (brawner@gmail.com)
       velocity="30.1" />
   </joint>
   <link
-    name="Go2_RL_thigh">
+    name="RL_thigh">
     <inertial>
       <origin
         xyz="-0.00374 -0.0223 -0.0327"
@@ -747,15 +747,15 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_RL_thigh_joint"
+    name="RL_thigh_joint"
     type="revolute">
     <origin
       xyz="0 0.0955 0"
       rpy="0 0 0" />
     <parent
-      link="Go2_RL_hip" />
+      link="RL_hip" />
     <child
-      link="Go2_RL_thigh" />
+      link="RL_thigh" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -765,7 +765,7 @@ Stephen Brawner (brawner@gmail.com)
       velocity="30.1" />
   </joint>
   <link
-    name="Go2_RL_calf">
+    name="RL_calf">
     <inertial>
       <origin
         xyz="0.00548 -0.000975 -0.115"
@@ -802,15 +802,15 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_RL_calf_joint"
+    name="RL_calf_joint"
     type="revolute">
     <origin
       xyz="0 0 -0.213"
       rpy="0 0 0" />
     <parent
-      link="Go2_RL_thigh" />
+      link="RL_thigh" />
     <child
-      link="Go2_RL_calf" />
+      link="RL_calf" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -820,7 +820,7 @@ Stephen Brawner (brawner@gmail.com)
       velocity="15.70" />
   </joint>
   <link
-    name="Go2_RL_calflower">
+    name="RL_calflower">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
@@ -829,20 +829,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_RL_calflower_joint"
+    name="RL_calflower_joint"
     type="fixed">
     <origin
       xyz="0.020 0 -0.148"
       rpy="0 0.05 0" />
     <parent
-      link="Go2_RL_calf" />
+      link="RL_calf" />
     <child
-      link="Go2_RL_calflower" />
+      link="RL_calflower" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_RL_calflower1">
+    name="RL_calflower1">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
@@ -851,20 +851,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_RL_calflower1_joint"
+    name="RL_calflower1_joint"
     type="fixed">
     <origin
       xyz="-0.01 0 -0.04"
       rpy="0 0.48 0" />
     <parent
-      link="Go2_RL_calflower" />
+      link="RL_calflower" />
     <child
-      link="Go2_RL_calflower1" />
+      link="RL_calflower1" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_RL_foot">
+    name="RL_foot">
     <inertial>
       <origin
         xyz="0 0 0"
@@ -901,20 +901,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_RL_foot_joint"
+    name="RL_foot_joint"
     type="fixed" dont_collapse="true">
     <origin
       xyz="0 0 -0.213"
       rpy="0 0 0" />
     <parent
-      link="Go2_RL_calf" />
+      link="RL_calf" />
     <child
-      link="Go2_RL_foot" />
+      link="RL_foot" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_RR_hip">
+    name="RR_hip">
     <inertial>
       <origin
         xyz="0.0054 -0.00194 -0.000105"
@@ -951,15 +951,15 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_RR_hip_joint"
+    name="RR_hip_joint"
     type="revolute">
     <origin
       xyz="-0.1934 -0.0465 0"
       rpy="0 0 0" />
     <parent
-      link="Go2_base_link" />
+      link="base_link" />
     <child
-      link="Go2_RR_hip" />
+      link="RR_hip" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -969,7 +969,7 @@ Stephen Brawner (brawner@gmail.com)
       velocity="30.1" />
   </joint>
   <link
-    name="Go2_RR_thigh">
+    name="RR_thigh">
     <inertial>
       <origin
         xyz="-0.00374 0.0223 -0.0327"
@@ -1006,15 +1006,15 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_RR_thigh_joint"
+    name="RR_thigh_joint"
     type="revolute">
     <origin
       xyz="0 -0.0955 0"
       rpy="0 0 0" />
     <parent
-      link="Go2_RR_hip" />
+      link="RR_hip" />
     <child
-      link="Go2_RR_thigh" />
+      link="RR_thigh" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -1024,7 +1024,7 @@ Stephen Brawner (brawner@gmail.com)
       velocity="30.1" />
   </joint>
   <link
-    name="Go2_RR_calf">
+    name="RR_calf">
     <inertial>
       <origin
         xyz="0.00548 0.000975 -0.115"
@@ -1061,15 +1061,15 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_RR_calf_joint"
+    name="RR_calf_joint"
     type="revolute">
     <origin
       xyz="0 0 -0.213"
       rpy="0 0 0" />
     <parent
-      link="Go2_RR_thigh" />
+      link="RR_thigh" />
     <child
-      link="Go2_RR_calf" />
+      link="RR_calf" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -1079,7 +1079,7 @@ Stephen Brawner (brawner@gmail.com)
       velocity="15.70" />
   </joint>
   <link
-    name="Go2_RR_calflower">
+    name="RR_calflower">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
@@ -1088,20 +1088,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_RR_calflower_joint"
+    name="RR_calflower_joint"
     type="fixed">
     <origin
       xyz="0.020 0 -0.148"
       rpy="0 0.05 0" />
     <parent
-      link="Go2_RR_calf" />
+      link="RR_calf" />
     <child
-      link="Go2_RR_calflower" />
+      link="RR_calflower" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_RR_calflower1">
+    name="RR_calflower1">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
@@ -1110,20 +1110,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_RR_calflower1_joint"
+    name="RR_calflower1_joint"
     type="fixed">
     <origin
       xyz="-0.01 0 -0.04"
       rpy="0 0.48 0" />
     <parent
-      link="Go2_RR_calflower" />
+      link="RR_calflower" />
     <child
-      link="Go2_RR_calflower1" />
+      link="RR_calflower1" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_RR_foot">
+    name="RR_foot">
     <inertial>
       <origin
         xyz="0 0 0"
@@ -1160,20 +1160,20 @@ Stephen Brawner (brawner@gmail.com)
     </collision>
   </link>
   <joint
-    name="Go2_RR_foot_joint"
+    name="RR_foot_joint"
     type="fixed" dont_collapse="true">
     <origin
       xyz="0 0 -0.213"
       rpy="0 0 0" />
     <parent
-      link="Go2_RR_calf" />
+      link="RR_calf" />
     <child
-      link="Go2_RR_foot" />
+      link="RR_foot" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_imu">
+    name="imu">
     <inertial>
       <origin
         xyz="0 0 0"
@@ -1190,20 +1190,20 @@ Stephen Brawner (brawner@gmail.com)
     </inertial>
   </link>
   <joint
-    name="Go2_imu_joint"
+    name="imu_joint"
     type="fixed">
     <origin
       xyz="-0.02557 0 0.04232"
       rpy="0 0 0" />
     <parent
-      link="Go2_base_link" />
+      link="base_link" />
     <child
-      link="Go2_imu" />
+      link="imu" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="Go2_utlidar_lidar">
+    name="utlidar_lidar">
     <inertial>
       <origin
         xyz="0 0 0"
@@ -1220,15 +1220,15 @@ Stephen Brawner (brawner@gmail.com)
     </inertial>
   </link>
   <joint
-    name="Go2_utlidar_lidar_joint"
+    name="utlidar_lidar_joint"
     type="fixed">
     <origin
       xyz="0.28945 0 -0.046825"
       rpy="0 2.8782 0" />
     <parent
-      link="Go2_base_link" />
+      link="base_link" />
     <child
-      link="Go2_utlidar_lidar" />
+      link="utlidar_lidar" />
     <axis
       xyz="0 0 0" />
   </joint>

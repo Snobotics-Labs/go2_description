@@ -8,7 +8,8 @@ class JointPublisher : public rclcpp::Node
 public:
   JointPublisher() : Node("go2_joint_publisher") {
     RCLCPP_INFO(this->get_logger(), "Go2 Joint Publisher");
-    joint_state_publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("joint_states", 10);
+    // joint_state_publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("joint_states", 10);
+    joint_state_publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("Go2_joint_states", 10);
     low_state_subscription_ = this->create_subscription<unitree_go::msg::LowState>(
       "lowstate", 10, std::bind(&JointPublisher::low_state_callback, this, std::placeholders::_1));
   }
@@ -19,18 +20,30 @@ private:
       sensor_msgs::msg::JointState joint_state;
       joint_state.header.stamp = this->now();
       joint_state.name = {
-        "FL_hip_joint",
-        "FL_thigh_joint",
-        "FL_calf_joint",
-        "FR_hip_joint",
-        "FR_thigh_joint",
-        "FR_calf_joint",
-        "RL_hip_joint",
-        "RL_thigh_joint",
-        "RL_calf_joint",
-        "RR_hip_joint",
-        "RR_thigh_joint",
-        "RR_calf_joint",
+        "Go2_FL_hip_joint",
+        "Go2_FL_thigh_joint",
+        "Go2_FL_calf_joint",
+        "Go2_FR_hip_joint",
+        "Go2_FR_thigh_joint",
+        "Go2_FR_calf_joint",
+        "Go2_RL_hip_joint",
+        "Go2_RL_thigh_joint",
+        "Go2_RL_calf_joint",
+        "Go2_RR_hip_joint",
+        "Go2_RR_thigh_joint",
+        "Go2_RR_calf_joint",
+        // "FL_hip_joint",
+        // "FL_thigh_joint",
+        // "FL_calf_joint",
+        // "FR_hip_joint",
+        // "FR_thigh_joint",
+        // "FR_calf_joint",
+        // "RL_hip_joint",
+        // "RL_thigh_joint",
+        // "RL_calf_joint",
+        // "RR_hip_joint",
+        // "RR_thigh_joint",
+        // "RR_calf_joint",
       };
       joint_state.position = {
         msg->motor_state[3].q, msg->motor_state[4].q, msg->motor_state[5].q,

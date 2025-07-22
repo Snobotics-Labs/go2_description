@@ -26,10 +26,11 @@ def generate_launch_description():
     nodes = []
     pkg_share = get_package_share_directory('go2_description')
 
+    robot_urdf = 'go2_description_airy.urdf'
     robot_description = ParameterValue(
         Command([
             'xacro ',
-            PathJoinSubstitution([pkg_share, 'urdf', 'go2_description_airy.urdf']),
+            PathJoinSubstitution([pkg_share, 'urdf', robot_urdf]),
         ]),
         value_type=str
         )
